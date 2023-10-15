@@ -1,0 +1,48 @@
+絶対に一個ずつしかボタン押さないでね！
+<%= form_for(@perfume, class: 'form-horizontal', role: 'form') do |f| %>
+    <div class="container-sindan">
+        <div class="row">
+            <div class="col-12">
+                <p>Question1. 味の濃さについて</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true, "1", nil %>コッテリ派だ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>あっさり派だ</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question2. 麺の太さ</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>太め</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>細め</p>
+            </div>
+
+            <div class="col-12">
+                <p>Question3. どの味に興味があるか</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "1", nil %>醤油</p>
+            </div>
+            <div class="col-6">
+                <p><%= f.check_box :question, {multiple: true}, "2", nil %>塩</p>
+            </div>
+            <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "3", nil %>豚骨</p>
+        </div>
+        <div class="col-6">
+            <p><%= f.check_box :question, {multiple: true}, "4", nil %>味噌</p>
+        </div>
+            <div class="col-12">
+                
+            </div>
+        </div>
+    </div>
+    <div class="sindanbotan">
+        <%= f.submit "post" %>
+    </div>
+<% end %>

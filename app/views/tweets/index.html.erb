@@ -1,0 +1,15 @@
+<h1>RAMENTAROU</h1>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<div class="tweets-container">
+  <% @tweet.each do |t| %>
+    <div class="tweet">
+    <%= image_tag t.image_url, size: "250x200" if t.image? %> 
+    <%= t.store %>
+    <%= t.product %>
+    <%= link_to "詳細へ", tweet_path(t.id) %> 
+    <%= button_to "削除する", tweet_path(t.id), method: :delete %> 
+    </div>
+  <% end %>
+  
+</div>
